@@ -1,13 +1,10 @@
-public class Bicycle extends Transport {
-    public static final Integer wheels = 2;
-
-    public Bicycle(String modelName) {
-        super(modelName, 2);
+public class Bicycle extends Transport implements UpdateTyre {
+    public Bicycle(String modelName, int wheelCount) {
+        super(modelName, wheelCount);
     }
 
-    @Override
-    public void check () {
-        updateTyre();
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
     }
 }
 

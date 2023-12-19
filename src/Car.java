@@ -1,13 +1,11 @@
-public class Car extends Transport {
+public class Car extends Transport implements UpdateTyre, CheckEngine {
 
-    public int wheelsCount = 4;
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
 
-       public void checkEngine() {
-            System.out.println("Проверяем двигатель");
-        }
-
-    public Car (String modelName, int wheelsCount) {
-        super(modelName, 4);
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
 
 

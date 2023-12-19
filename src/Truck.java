@@ -1,11 +1,12 @@
-public class Truck extends Car {
+public class Truck extends Car implements UpdateTyre, CheckEngine, CheckTrailer {
 
-       public void checkTrailer() {
-            System.out.println("Проверяем прицеп");
-        }
-
-       public Truck(String modelName, int wheelsCount) {
+    public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
+    }
+
+
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
     }
 
     @Override
@@ -13,5 +14,7 @@ public class Truck extends Car {
         super.check();
         checkTrailer();
     }
+
+
 }
 
